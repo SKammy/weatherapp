@@ -1,0 +1,89 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  height: 100vh;
+  background: linear-gradient(rgb(47, 150, 163), rgb(48, 62, 143));
+  font-family: Helvetica, sans-serif;
+  color: white;
+}
+input[type="checkbox"] {
+  height: 0;
+  width: 0;
+  visibility: hidden;
+}
+label {
+  cursor: pointer;
+  text-indent: -9999px;
+  width: 60px;
+  height: 30px;
+  background: rgba(103, 34, 182, 0.733);
+  display: block;
+  border-radius: 100px;
+  position: relative;
+}
+label:after {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 25px;
+  height: 25px;
+  background: #fff;
+  border-radius: 90px;
+  transition: 0.3s;
+}
+input:checked + label {
+  background: #15a2bb;
+}
+input:checked + label:after {
+  left: calc(100% - 5px);
+  transform: translate(-100%);
+}
+label:active:after {
+  width: 50px;
+}
+
+// .location,
+// .temperature {
+//   height: 30vh;
+//   width: 50%;
+//   display: flex;
+//   justify-content: space-around;
+//   align-items: center;
+// }
+// .temperature {
+//   flex-direction: column;
+// }
+// .degree-section {
+//   display: flex;
+//   align-items: center;
+//   span {
+//     margin: 10px;
+//     font-size: 30px;
+//   }
+//   h2 {
+//     font-size: 40px;
+//   }
+// }
+// .atmosphere {
+//   display: flex;
+//   .wind_section {
+//     display: flex;
+//     margin: 2rem;
+//     span {
+//       font-size: 1.5rem;
+//       margin-left: 0.5rem;
+//     }
+//   }
+//   .humidity_section {
+//     display: flex;
+//     margin: 2rem;
+//     span {
+//       font-size: 1.5rem;
+//       margin-left: 0.5rem;
+//     }
+//   }
+// }

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Forcast</title>
+    <link rel="stylesheet" href="css/all.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/mdb.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <section id="weather_results" class="container-fluid mt-4">
+      <div class="d-flex justify-content-between" style="width:100px;">
+        <h3>C</h3>
+        <input type="checkbox" id="switch" name="degreed" /><label for="switch">Toggle</label>
+        <h3>F</h3>
+      </div>
+
+      <div class="row justify-content-center">
+        <div class="col-md-12 text-center">
+          <h1 class="location_timezone">timezone</h1>
+        </div>
+      </div>
+
+      <div class="container-fluid mt-5">
+        <div class="row justify-content-center">
+          <div class="col-md-9 text-center d-flex justify-content-lg-around">
+            <div class="col-md-3">
+              <canvas class="icon" width="120" height="120"></canvas>
+            </div>
+            <div class="col-md-3 text-center d-flex">
+              <h2 class="degree display-4">-</h2>
+              <h4 class="display-4">&deg;</h4>
+            </div>
+            <div class="col-md-3">
+              <div class="d-flex">
+                  <h4 class=" h4-responsive max_temp">-</h4>
+                  <span>&deg;</span>
+              </div>
+              
+              <div class="d-flex">
+                  <h4 class=" h4-responsive min_temp">-</h4>
+                  <span>&deg;</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container mb-3">
+        <div class="row justify-content-center">
+          <div class="col-md-8 text-center">
+            <h3 class="temp_description h3-responsive">Summary</h3>
+          </div>
+        </div>
+      </div>
+
+      <div class="container-fluid">
+        <div class="row justify-content-center">
+          <div class="col-md-12 d-flex">
+            <div class="col-md-3 d-flex w-responsive">
+              <i class="fas fa-umbrella" style="margin-right:5px;"></i>
+              <h2 class="rain h5-responsive"></h2>
+              <span>%</span>
+            </div>
+            <div class="col-md-3 d-flex w-responsive">
+              <i class="fas fa-wind" style="margin-right:5px;"></i>
+              <h2 class="wind_speed h5-responsive"></h2>
+              <h6>m/s</h6>
+            </div>
+            <div class="col-md-3 d-flex w-responsive">
+              <h2 class="humidity h5-responsive"></h2>
+              <span>%</span>
+            </div>
+            <div class="col-md-3 d-flex w-responsive">
+              <h5 class="sunrise"></h5>
+              <i class="fas fa-sun" style="margin:5px;"></i>
+              <h5 class="sunset"></h5>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!--Week days-->
+      <div class="container-fluid week_weather mt-5">
+        <div class="row my-3">
+          <div
+            class="col-md-12 d-flex justify-content-between py-2"
+            style="background-color: rgba(0, 0, 0, 0.336);"
+          >
+            <div class="align-self-start">
+              <h4 class="day">Day</h4>
+            </div>
+
+            <div
+              class="d-flex justify-content-around"
+              style="justify-self:end;"
+            >
+              <canvas class="icon_sub" width="30" height="30"></canvas>
+              <div class=" ml-2 d-inline-flex" style="justify-content: space-evenly;">
+                <p class="max_week_temp mr-3">max</p>
+                <p class="min_week_temp">min</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row my-3">
+          <div
+            class="col-md-12 d-flex justify-content-between py-2"
+            style="background-color: rgba(0, 0, 0, 0.336);"
+          >
+            <div class="align-self-start">
+              <h4 class="day">Day</h4>
+            </div>
+
+            <div class="d-flex" style="justify-self:end;">
+              <canvas class="icon_sub" width="30" height="30"></canvas>
+              <div class=" ml-2 d-inline-flex" style="justify-content: space-evenly;">
+                <p class="max_week_temp mr-3">max</p>
+                <p class="min_week_temp">min</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row my-3">
+          <div
+            class="col-md-12 d-flex  justify-content-between py-2"
+            style="background-color: rgba(0, 0, 0, 0.336);"
+          >
+            <div class="align-self-start">
+              <h4 class="day">Day</h4>
+            </div>
+
+            <div class="d-flex" style="justify-self:end;">
+              <canvas class="icon_sub" width="30" height="30"></canvas>
+              <div class="ml-2 d-inline-flex" style="justify-content: space-evenly;">
+                <p class="max_week_temp mr-3">max</p>
+                <p class="min_week_temp">min</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="js/all.js"></script>
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/mdb.min.js"></script>
+    <script src="js/skycons.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>
